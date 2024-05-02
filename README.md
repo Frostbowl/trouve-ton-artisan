@@ -1,3 +1,100 @@
+# MASCLET Clément 
+
+    Projet développé avec ReactJs et Bootstrap
+
+## Trouve ton artisan
+
+Dans le cadre de ma formation, un site répertoriant les artisans de la région Auvergne Rhône-Alpes doit être créé.
+
+Il faut donc réaliser les maquettes pour tous supports et la partie front-end faisant appel à une API.
+
+## Les attentes
+
+- Le site devra être accessible à tous. Conforme à la norme WCAG2.1, mobile first et responsif.
+- Doit respecter les bonnes pratiques au niveau de la sécurité.
+- Le site devra s'intégrer à l'environnement numérique suivant: https://www.auvergnerhonealpes.fr/contenus/ladministration-regionale
+
+## Technologies à utiliser
+
+Pour construire cette plateforme, devront être utiliser: 
+
+- Figma pour le maquettage
+- ReactJS
+- HTML5, Bootstrap, Sass, JS
+- Git et GitHub pour le versionning
+- Un hébergeur (ici: )
+- Un server de mail local (ici: mailJS)
+
+## Identité graphique
+
+### Police
+
+La police utilisée sera "graphik".
+
+### Logo / Favicon / Palette de couleurs
+
+Le logo et le favicon sont fournis par le CEF.
+
+    Les couleurs utilisées seront:
+        - #f1f8fc
+        - #0074c7
+        - #00497c
+        - #384050 
+        - #cd2c2e
+        - #82b864
+
+    Les deux dernières couleurs seront utilisées uniquement pour de l'accentuation avec parcimonie
+
+## Livrables attendus
+### Contenu des pages
+
+**Le footer**
+
+- Identique sur toutes les pages.
+- Menu pour les pages légales, vides.
+- Adresse et contacts de l'antenne.
+
+
+**Le header**
+
+- Présent sur toutes les pages.
+- Logo avec un lien qui ramène vers la page d'accueil.
+- Menu avec des liens vers les pages "Bâtiments", "Services", "Fabrication" et "Alimentation".
+- Une barre de recherche qui devra faire ressortir les artisans en cherchant dans les noms, spécialités et ville.
+
+**Page d'accueil**
+
+- Explication étape par étape du fonctionnement du site.
+    - Choisir la catégorie d'artisanat dans le menu.
+    - Choisir un artisan
+    - Contact via formulaire
+    - Réponse apportée sous 48h
+
+- Les trois artisans du mois avec pour chacun: 
+    - Nom de l'artisan ou de l'entreprise.
+    - Note sur cinq avec des étoiles.
+    - Spécialité.
+    - Localisation
+
+**Page "Fiche artisan"**
+
+- Nom de l'artisan ou entreprise
+- Note avec étoiles
+- Spécialité
+- Localisation
+- Rubrique "à propos"
+- Formulaire de contact qui envoie un e-mail à l'artisan
+- Site web de l'artisan le cas échéant
+
+**Page 404**
+
+- Une image
+- Texte "404"
+- Devra apparaître dès lors qu'on essaie d'accéder à autre chose que la page d'accueil
+
+________________________________________________________________________________________________________________________________________________
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
