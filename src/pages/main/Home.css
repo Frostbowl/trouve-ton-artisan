@@ -1,0 +1,71 @@
+.card{
+    margin-top: 2rem;
+}
+
+.card:nth-child(5){
+    margin-bottom: 2rem;
+}
+
+.card-header{
+    text-align: center;
+    background-color: #0074c7;
+    color: #f1f8fc;
+}
+
+.card-body{
+    background-color: #f1f8fc;
+}
+
+.card-tuto{
+    margin-top: 2rem;
+    border: 0.4rem solid #00497c;
+    border-radius: 15px;
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #82b864;
+}
+
+.contArtisans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0.4rem solid #00497c;
+    border-radius: 15px;
+    background-color: white;
+
+}
+
+span{
+    color: #82b864;
+}
+
+@media (min-width: 768px){
+    .card-tuto{
+        display: flex;
+        flex-direction: column;
+    }
+    .card:nth-child(2n+1){
+        align-self: flex-end;
+        margin-right: 15%;
+    }
+    .card{
+        width: 30rem;
+    }
+    .card:nth-child(2n+0){
+        margin-left: 15%;
+    }
+    .topArtisans{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

@@ -36,9 +36,10 @@ button:hover{
 
 nav{
     background-color: #f1f8fc;
+    border-bottom: 0.4rem solid #00497c;
 }
 
-@media (min-width: 768px){
+@media (min-width: 576px){
     .navigation{
         display: flex;
         flex-direction: row;
