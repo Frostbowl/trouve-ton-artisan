@@ -6,7 +6,7 @@ const Header = () => {
     return(
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <Link class="navbar-brand" to="#"><img className="logo" src="../img/logo.png" alt="Trouve ton artisant"/></Link>
+          <Link class="navbar-brand" to="/"><img className="logo" src="../img/logo.png" alt="Trouve ton artisant"/></Link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
