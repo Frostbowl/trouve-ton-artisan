@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './pages/header/Header';
 import Footer from './pages/footer/Footer';
 import Home from './pages/main/Home';
+import Batiment from './pages/main/Batiment';
 import Mentions from './pages/main/Mention';
 import Data from './pages/main/Data';
 import Accessibility from './pages/main/Accessibility';
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path='/batiment' element={<Batiment/>}/>
         <Route path='/mention' element={<Mentions/>}/>
         <Route path='/data' element={<Data/>}/>
         <Route path='/access' element={<Accessibility/>}/>

@@ -2,7 +2,7 @@
     margin-top: 2rem;
 }
 
-.card:nth-child(5){
+.topCard:nth-child(5){
     margin-bottom: 2rem;
 }
 
@@ -42,30 +42,35 @@ h1{
     background-color: white;
 
 }
+.tuto:nth-last-child(1n){
+    margin-bottom: 2rem;
+}
 
 span{
     color: #82b864;
 }
 
 @media (min-width: 768px){
-    .card-tuto{
-        display: flex;
-        flex-direction: column;
-    }
-    .card:nth-child(2n+1){
-        align-self: flex-end;
-        margin-right: 15%;
-    }
-    .card{
+    .topCard{
         width: 30rem;
     }
-    .card:nth-child(2n+0){
-        margin-left: 15%;
-    }
+    
     .topArtisans{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    .tuto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .tutorial{
+        width: 30rem;
+        height: 10rem;
     }
 }

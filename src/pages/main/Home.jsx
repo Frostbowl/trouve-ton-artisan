@@ -5,41 +5,44 @@ import artisans from '../../datas.json';
 
 const Home = () =>{
 
-    const topArtisans = artisans.filter(artisan => artisan.top);
+    let topArtisans = artisans.filter(artisan => artisan.top);
+
     return(
         <div>
         <section className="container card-tuto">
             <h1>Comment trouver mon artisan</h1>
-            <div className="card ">
-                <div className="card-header">
-                    1
+            <div className="tuto">
+                <div className="card tutorial">
+                    <div className="card-header">
+                        1
+                    </div>
+                    <div className="card-body">
+                        <h2>Choisissez votre catégorie</h2>
+                    </div>
                 </div>
-                <div className="card-body">
-                    <h2>Choisissez votre catégorie</h2>
+                <div className="card tutorial">
+                    <div className="card-header">
+                        2
+                    </div>
+                    <div className="card-body">
+                        <h2>Choisissez un artisan</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="card ">
-                <div className="card-header">
-                    2
+                <div className="card tutorial">
+                    <div className="card-header">
+                        3
+                    </div>
+                    <div className="card-body">
+                        <h2>Contactez le via le formulaire dédié</h2>
+                    </div>
                 </div>
-                <div className="card-body">
-                    <h2>Choisissez un artisan</h2>
-                </div>
-            </div>
-            <div className="card ">
-                <div className="card-header">
-                    3
-                </div>
-                <div className="card-body">
-                    <h2>Contactez le via le formulaire dédié</h2>
-                </div>
-            </div>
-            <div className="card ">
-                <div className="card-header">
-                    4
-                </div>
-                <div className="card-body">
-                    <h2>Une réponse vous sera apportée sous 48h</h2>
+                <div className="card tutorial">
+                    <div className="card-header">
+                        4
+                    </div>
+                    <div className="card-body">
+                        <h2>Une réponse vous sera apportée sous 48h</h2>
+                    </div>
                 </div>
             </div>
         </section>
@@ -48,7 +51,7 @@ const Home = () =>{
             <div className="topArtisans">
             {topArtisans.map(artisan =>(
                 <div key={artisan.id} className="artisan">
-                    <div className="card">
+                    <div className="card topCard">
                         <div className="card-header">
                             <h2>{artisan.name}</h2>
                         </div>

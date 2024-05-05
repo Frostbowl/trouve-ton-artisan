@@ -12,7 +12,7 @@ const Header = () => {
           </button>
           <div class="collapse navbar-collapse headBar" id="navbarSupportedContent">
             <div className="navigation">
-              <Link class="nav-link" aria-current="page" to="#">Bâtiment</Link>                 
+              <Link class="nav-link" aria-current="page" to="/batiment">Bâtiment</Link>                 
               <Link class="nav-link " aria-current="page" to="#">Services</Link>      
               <Link class="nav-link " aria-current="page" to="#">Fabrication</Link>
               <Link class="nav-link " aria-current="page" to="#">Alimentation</Link>

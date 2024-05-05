@@ -1,0 +1,28 @@
+.artisanBat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.artisanBat:nth-last-child(1n){
+    margin-bottom: 2rem;
+}
+
+.batiment{
+    border: 0.4rem solid #00497c;
+    border-radius: 15px;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px){
+    .artisanBat{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    .batCard{
+        width: 30rem;
+    }
+}
