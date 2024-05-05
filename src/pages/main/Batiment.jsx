@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Batiment.css";
 import artisans from '../../datas.json';
 

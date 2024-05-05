@@ -14,8 +14,8 @@ const Header = () => {
             <div className="navigation">
               <Link class="nav-link" aria-current="page" to="/batiment">Bâtiment</Link>                 
               <Link class="nav-link " aria-current="page" to="/service">Services</Link>      
-              <Link class="nav-link " aria-current="page" to="#">Fabrication</Link>
-              <Link class="nav-link " aria-current="page" to="#">Alimentation</Link>
+              <Link class="nav-link " aria-current="page" to="/fabrication">Fabrication</Link>
+              <Link class="nav-link " aria-current="page" to="/alimentation">Alimentation</Link>
             </div>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search"/>

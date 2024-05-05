@@ -1,15 +1,15 @@
 import React from "react";
 import artisans from '../../datas.json';
 
-const Service = () => {
+const Fabrication= () => {
 
-    let servArtisans = artisans.filter(artisan => artisan.category === "Services");
+    let fabArtisans = artisans.filter(artisan => artisan.category === "Fabrication");
 
     return(
         <div className="container batiment">
             <h1>Les spécialistes du bâtiment</h1>
             <section className="artisanBat">
-                {servArtisans.map(artisan =>(
+                {fabArtisans.map(artisan =>(
                     <div key={artisan.id} className="card batCard">
                         <div className="card-header artisanName">
                             <h2>{artisan.name}</h2>
@@ -26,4 +26,4 @@ const Service = () => {
     )
 }
 
-export default Service;
+export default Fabrication;

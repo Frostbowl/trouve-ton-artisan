@@ -5,6 +5,8 @@ import Footer from './pages/footer/Footer';
 import Home from './pages/main/Home';
 import Batiment from './pages/main/Batiment';
 import Service from './pages/main/Service';
+import Fabrication from './pages/main/Fabrication';
+import Alimentation from './pages/main/Alimentation';
 import Mentions from './pages/main/Mention';
 import Data from './pages/main/Data';
 import Accessibility from './pages/main/Accessibility';
@@ -18,6 +20,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path='/batiment' element={<Batiment/>}/>
         <Route path='/service' element={<Service/>}/>
+        <Route path='/fabrication' element={<Fabrication/>}/>
+        <Route path='/alimentation' element={<Alimentation/>}/>
         <Route path='/mention' element={<Mentions/>}/>
         <Route path='/data' element={<Data/>}/>
         <Route path='/access' element={<Accessibility/>}/>
