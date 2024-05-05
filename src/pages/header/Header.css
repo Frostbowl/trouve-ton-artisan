@@ -18,6 +18,20 @@
     border-bottom: 2px solid #0074c7 ;
 }
 
+section{
+    background-color: white;
+    border: 0.4rem solid #00497c;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+section h2{
+    text-align: center;
+}
+
 .headBar{
     justify-content: space-between;
 }
@@ -44,5 +58,15 @@ nav{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .result{
+        width: 25rem;
+    }
+    .search{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 }

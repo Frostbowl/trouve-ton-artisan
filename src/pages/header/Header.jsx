@@ -1,30 +1,75 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import artisans from "../../datas.json";
 
 const Header = () => {
+
+    let [recherche, setRecherche] = useState('');
+    let [filtreArtisans, setFiltreArtisans] = useState([]);
+
+    let handleRecherche = (event) => {
+
+      event.preventDefault();      
+
+      setRecherche(event.target.value);
+      let filtre = artisans.filter(artisan =>
+        artisan.name.includes(event.target.value) ||
+        artisan.specialty.includes(event.target.value) ||
+        artisan.location.includes(event.target.value)
+      );
+      setFiltreArtisans(filtre);
+    };
+
     return(
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <Link class="navbar-brand" to="/"><img className="logo" src="../img/logo.png" alt="Trouve ton artisant"/></Link>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <div>
+    <nav className="navbar navbar-expand-lg ">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/"><img className="logo" src="../img/logo.png" alt="Trouve ton artisant"/></Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse headBar" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse headBar" id="navbarSupportedContent">
             <div className="navigation">
-              <Link class="nav-link" aria-current="page" to="/batiment">Bâtiment</Link>                 
-              <Link class="nav-link " aria-current="page" to="/service">Services</Link>      
-              <Link class="nav-link " aria-current="page" to="/fabrication">Fabrication</Link>
-              <Link class="nav-link " aria-current="page" to="/alimentation">Alimentation</Link>
+              <Link className="nav-link" aria-current="page" to="/batiment">Bâtiment</Link>                 
+              <Link className="nav-link " aria-current="page" to="/service">Services</Link>      
+              <Link className="nav-link " aria-current="page" to="/fabrication">Fabrication</Link>
+              <Link className="nav-link " aria-current="page" to="/alimentation">Alimentation</Link>
             </div>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search"/>
-              <button class=" " type="submit">Search</button>
+            <form className="d-flex" role="search">
+              <input className="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search" onChange={handleRecherche}/>
+              <button type="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
+      {filtreArtisans.length > 0 && (
+          <div className="container ">
+            <section>
+            <h2>Résultat de la recherche:</h2>
+            <div className="search">
+              {filtreArtisans.map(artisan =>(
+                <div key={artisan.id} >
+                  <div className="card result">
+                    <div className="card-header">
+                      <h2> {artisan.name} </h2>
+                    </div>
+                    <div className="card-body">
+                      <p> {artisan.specialty} </p>
+                      <p> {artisan.location} </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            </section>
+          </div>
+        )}
+      </div>
     )
 }
 
 export default Header;
+
+
+

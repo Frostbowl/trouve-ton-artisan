@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer =()=>{
     return(
         <footer>
-            <section className="footer">
+            <article className="footer">
                 <div className="legal">
                     <h2>Pages légales</h2>
                     <Link to='/mention'>Mentions légales</Link>
@@ -23,7 +23,7 @@ const Footer =()=>{
                         +33 4 26 73 40 00                    
                     </address>
                 </div>
-            </section>
+            </article>
         </footer>
     )
 }
