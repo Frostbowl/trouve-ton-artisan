@@ -4,6 +4,7 @@ import Header from './pages/header/Header';
 import Footer from './pages/footer/Footer';
 import Home from './pages/main/Home';
 import Batiment from './pages/main/Batiment';
+import Service from './pages/main/Service';
 import Mentions from './pages/main/Mention';
 import Data from './pages/main/Data';
 import Accessibility from './pages/main/Accessibility';
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/batiment' element={<Batiment/>}/>
+        <Route path='/service' element={<Service/>}/>
         <Route path='/mention' element={<Mentions/>}/>
         <Route path='/data' element={<Data/>}/>
         <Route path='/access' element={<Accessibility/>}/>
