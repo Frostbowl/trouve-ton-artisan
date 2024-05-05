@@ -50,7 +50,7 @@ const Home = () =>{
             <h1>Les artisans du mois</h1>
             <div className="topArtisans">
             {topArtisans.map(artisan =>(
-                <div key={artisan.id} className="artisan">
+                <div key={artisan.id}>
                     <div className="card topCard">
                         <div className="card-header">
                             <h2>{artisan.name}</h2>
