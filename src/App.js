@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React from 'react';
 import Header from './pages/header/Header';
 import Footer from './pages/footer/Footer';
@@ -11,6 +11,7 @@ import Mentions from './pages/main/Mention';
 import Data from './pages/main/Data';
 import Accessibility from './pages/main/Accessibility';
 import Cookies from './pages/main/Cookies';
+import Artisan from './pages/main/Artisan';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/data' element={<Data/>}/>
         <Route path='/access' element={<Accessibility/>}/>
         <Route path='/cookie' element={<Cookies/>}/>
+        <Route path='/artisan/:id' element={<Artisan/>}/>
       </Routes>
       <Footer/>
     </div>

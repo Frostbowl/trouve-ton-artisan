@@ -50,6 +50,7 @@ const Home = () =>{
             <h1>Les artisans du mois</h1>
             <div className="topArtisans">
             {topArtisans.map(artisan =>(
+                <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                 <div key={artisan.id}>
                     <div className="card topCard">
                         <div className="card-header">
@@ -62,6 +63,7 @@ const Home = () =>{
                         </div>
                     </div>
                 </div>
+                </Link>
             ))}
             </div>
         </section>

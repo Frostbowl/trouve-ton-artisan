@@ -18,7 +18,7 @@
     border-bottom: 2px solid #0074c7 ;
 }
 
-section{
+.searchContainer{
     background-color: white;
     border: 0.4rem solid #00497c;
     margin-top: 2rem;

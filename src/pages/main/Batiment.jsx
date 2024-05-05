@@ -1,6 +1,7 @@
 import React from "react";
 import "./Batiment.css";
 import artisans from '../../datas.json';
+import { Link } from "react-router-dom";
 
 const Batiment = () => {
 
@@ -11,6 +12,7 @@ const Batiment = () => {
             <h1>Les spécialistes du bâtiment</h1>
             <section className="artisanBat">
                 {batArtisans.map(artisan =>(
+                    <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                     <div key={artisan.id} className="card batCard">
                         <div className="card-header artisanName">
                             <h2>{artisan.name}</h2>
@@ -21,6 +23,7 @@ const Batiment = () => {
                             <p>Localisation: {artisan.location} </p>
                         </div>
                     </div>
+                    </Link>
                 ))}
             </section>
         </div>

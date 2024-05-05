@@ -45,10 +45,11 @@ const Header = () => {
       </nav>
       {filtreArtisans.length > 0 && (
           <div className="container ">
-            <section>
+            <section className="searchContainer">
             <h2>Résultat de la recherche:</h2>
             <div className="search">
               {filtreArtisans.map(artisan =>(
+                <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                 <div key={artisan.id} >
                   <div className="card result">
                     <div className="card-header">
@@ -60,6 +61,7 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
             </section>
