@@ -1,13 +1,48 @@
 import React from "react";
 import artisans from '../../datas.json';
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Artisan.css";
+import emailjs from '@emailjs/browser';
 
 const Artisan = () => {
 
+    //Variables pour la recherche d'artisan
+
     let { id } = useParams();
     let artisan = artisans.find(artisan => artisan.id === id);
+    
+    //Variables du formulaire de contact
+
+    const [name, setName] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        const content = {
+            to_name: "Artisan",
+            from_name: name,
+            from_subject: subject,
+            from_message: message,
+        }
+
+        emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
+        emailjs.send({serviceID:'service_uqmdpkg'}, {templateID:'template_gbydwv8'}, content, {publicKey:'NfdjUSFo5PKscQ3Hd'})
+        .then((response)=>{
+            alert('Email envoyé avec succès');
+            setName('');
+            setSubject('');
+            setMessage('');
+        })
+        .catch((error) =>{
+            console.error ('Erreur lors de l\'envoi de l\'email:', error);
+            alert('Erreur lors de l\'envoi de l\'email:');
+        })
+    }
+
 
     return(  
         <div> 
@@ -16,6 +51,7 @@ const Artisan = () => {
                 <h2>{artisan.note}{Array.from({ length: Math.round(parseFloat(artisan.note)) }, (_, index) => <span key={index}>&#9733;</span>)}</h2>
                 <h2>{artisan.location}</h2>
                 <h2>{artisan.specialty}</h2>
+                <div>
                 <div className="card about">
                     <div className="card-header">
                         à propos
@@ -23,8 +59,27 @@ const Artisan = () => {
                     <div className="card-body">
                         {artisan.about}
                     </div>
+                    <div className="card-footer">
+                        <h3>Site web: <Link to={artisan.website} target="_blank">{artisan.website}</Link></h3>
+                    </div>
                 </div>
-                <h3>Site web: <Link to={artisan.website} target="_blank">{artisan.website}</Link></h3>
+                <div className="contact">
+                    <form onSubmit={handleSubmit}>
+                        <h2>Contacter {artisan.name} </h2>
+                    <section className="container">
+                        <label For="name"></label>
+                        <input type="text" name="name" placeholder="Votre Nom" value={name} onChange={(e) => setName(e.target.value)} required />
+                        <label For="subject"></label>
+                        <input type="text" name="subject" placeholder="Objet de votre message" value={subject} onChange={(e) => setSubject(e.target.value)} required />
+                        <label For="message"></label>
+                        <textarea name="message" placeholder="Votre message" rows="4" value={message} onChange={(e) => setMessage(e.target.value)} required/>
+                        <div>
+                            <button type="submit" className="btn">Envoyer</button>
+                        </div>
+                    </section>
+                    </form>
+                </div>
+                </div>
             </section>
         </div>
     )

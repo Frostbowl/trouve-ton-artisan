@@ -56,8 +56,8 @@ const Header = () => {
                       <h2> {artisan.name} </h2>
                     </div>
                     <div className="card-body">
-                      <p> {artisan.specialty} </p>
-                      <p> {artisan.location} </p>
+                      <p>Spécialité: {artisan.specialty} </p>
+                      <p>Localisation: {artisan.location} </p>
                     </div>
                   </div>
                 </div>
