@@ -1,9 +1,9 @@
 @font-face{
-  font-family: 'graphik-bold', sans-serif;
+  font-family: 'graphik-bold';
   src: url(../public/font/Graphik-Bold-Trial.otf);
 }
 @font-face {
-  font-family: 'graphik-regular', sans-serif;
+  font-family: 'graphik-regular';
   src: url(../public/font/Graphik-Regular-Trial.otf);
 }
 

@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useLocation, } from 'react-router-dom';
 import React from 'react';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
@@ -12,11 +12,18 @@ import Data from './pages/Data';
 import Accessibility from './pages/Accessibility';
 import Cookies from './pages/Cookies';
 import Artisan from './pages/Artisan';
+import NotFound from './pages/NotFound';
 
 function App() {
+
+
+  const location = useLocation();
+  const pathFound = ['/', '/batiment', '/service', '/fabrication', '/alimentation', '/mention', '/data', '/access', '/cookie', '/artisan/:id'];
+  const headerFooter = pathFound.includes(location.pathname); 
+
   return (
     <div className="App">
-      <Header/>
+      {headerFooter && <Header/>}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/batiment' element={<Batiment/>}/>
@@ -28,10 +35,14 @@ function App() {
         <Route path='/access' element={<Accessibility/>}/>
         <Route path='/cookie' element={<Cookies/>}/>
         <Route path='/artisan/:id' element={<Artisan/>}/>
+        <Route path='/*' element={<NotFound/>}/>
       </Routes>
-      <Footer/>
+      {headerFooter && <Footer/>}
     </div>
   );
+  
 }
+
+
 
 export default App;

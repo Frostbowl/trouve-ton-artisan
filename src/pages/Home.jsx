@@ -13,8 +13,8 @@ const Home = () =>{
             <h1>Comment trouver mon artisan</h1>
             <div className="carousel slide container" id="carousel">
                 <div className="carousel-inner container">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     </button>
                     <div className="carousel-item active">
                         <h3>1</h3> 
@@ -32,8 +32,8 @@ const Home = () =>{
                         <h3>4</h3> 
                         <p>Une réponse vous sera apportée sous 48h</p>
                     </div>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     </button>
                 </div>
                 <div className="carousel-indicator " >

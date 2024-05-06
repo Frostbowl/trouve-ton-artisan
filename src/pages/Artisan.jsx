@@ -52,9 +52,9 @@ const Artisan = () => {
             <section className="container page">
                 <h1>{artisan.name}</h1>
                 <div className="infoArtisan">
-                        <h2>{artisan.note}{Array.from({ length: Math.round(parseFloat(artisan.note)) }, (_, index) => <span key={index}>&#9733;</span>)}</h2>
-                        <h2>{artisan.location}</h2>
-                        <h2>{artisan.specialty}</h2>
+                        <h2>{artisan.note} {Array.from({ length: Math.round(parseFloat(artisan.note)) }, (_, index) => <span key={index}>&#9733;</span>)}</h2>
+                        <h2>Localisation: {artisan.location}</h2>
+                        <h2>Spécialité: {artisan.specialty}</h2>
                 </div>
                 <div className="test">
                     <div className="card about">
@@ -85,6 +85,7 @@ const Artisan = () => {
                         </form>
                     </div>
                 </div>
+                <button className="return"><Link to='/'>Retour à l'accueil</Link></button>
             </section>
         </div>
     )
