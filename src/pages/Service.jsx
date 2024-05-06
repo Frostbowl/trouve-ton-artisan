@@ -1,16 +1,16 @@
 import React from "react";
-import artisans from '../../datas.json';
+import artisans from '../datas.json';
 import { Link } from "react-router-dom";
 
-const Alimentation= () => {
+const Service = () => {
 
-    let alimArtisans = artisans.filter(artisan => artisan.category === "Alimentation");
+    let servArtisans = artisans.filter(artisan => artisan.category === "Services");
 
     return(
         <div className="container batiment">
-            <h1>Les spécialistes de l'alimentation</h1>
+            <h1>Les spécialistes du service</h1>
             <section className="artisanBat">
-                {alimArtisans.map(artisan =>(
+                {servArtisans.map(artisan =>(
                     <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                     <div key={artisan.id} className="card batCard">
                         <div className="card-header artisanName">
@@ -29,4 +29,4 @@ const Alimentation= () => {
     )
 }
 
-export default Alimentation;
+export default Service;

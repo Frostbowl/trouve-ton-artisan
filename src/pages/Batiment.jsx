@@ -1,16 +1,17 @@
 import React from "react";
-import artisans from '../../datas.json';
+import "../assets/style/batiment.css";
+import artisans from '../datas.json';
 import { Link } from "react-router-dom";
 
-const Fabrication= () => {
+const Batiment = () => {
 
-    let fabArtisans = artisans.filter(artisan => artisan.category === "Fabrication");
+    let batArtisans = artisans.filter(artisan => artisan.category === "Bâtiment");
 
     return(
         <div className="container batiment">
-            <h1>Les spécialistes de la fabrication</h1>
+            <h1>Les spécialistes du bâtiment</h1>
             <section className="artisanBat">
-                {fabArtisans.map(artisan =>(
+                {batArtisans.map(artisan =>(
                     <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                     <div key={artisan.id} className="card batCard">
                         <div className="card-header artisanName">
@@ -29,4 +30,4 @@ const Fabrication= () => {
     )
 }
 
-export default Fabrication;
+export default Batiment;

@@ -36,7 +36,7 @@ section h2{
     justify-content: space-between;
 }
 
-button{
+.searchButton{
     width: 6rem;
     border: 2px solid #cd2c2e;
     border-radius: 10px;
@@ -44,13 +44,13 @@ button{
     color: #f1f8fc;
 }
 
-button:hover{
+.searchButton:hover{
     border: 2px solid #82b864;
 }
 
 nav{
-    background-color: #f1f8fc;
-    border-bottom: 0.4rem solid #00497c;
+    background-color: white;
+    border-bottom: 0.2rem solid #00497c;
 }
 
 @media (min-width: 576px){

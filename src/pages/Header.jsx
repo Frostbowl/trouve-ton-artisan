@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
-import artisans from "../../datas.json";
+import "../assets/style/header.css";
+import artisans from "../datas.json";
 
 const Header = () => {
 
@@ -14,9 +14,9 @@ const Header = () => {
 
       setRecherche(event.target.value);
       let filtre = artisans.filter(artisan =>
-        artisan.name.includes(event.target.value) ||
-        artisan.specialty.includes(event.target.value) ||
-        artisan.location.includes(event.target.value)
+        artisan.name.toLowerCase().includes(event.target.value) ||
+        artisan.specialty.toLowerCase().includes(event.target.value) ||
+        artisan.location.toLowerCase().includes(event.target.value)
       );
       setFiltreArtisans(filtre);
     };
@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search" onChange={handleRecherche}/>
-              <button type="submit">Search</button>
+              <button type="submit" className="searchButton">Search</button>
             </form>
           </div>
         </div>
