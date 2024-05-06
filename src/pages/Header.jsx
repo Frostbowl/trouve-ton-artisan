@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
-import artisans from "../../datas.json";
+import "../assets/style/header.css";
+import artisans from "../datas.json";
 
 const Header = () => {
 
@@ -14,9 +14,9 @@ const Header = () => {
 
       setRecherche(event.target.value);
       let filtre = artisans.filter(artisan =>
-        artisan.name.includes(event.target.value) ||
-        artisan.specialty.includes(event.target.value) ||
-        artisan.location.includes(event.target.value)
+        artisan.name.toLowerCase().includes(event.target.value) ||
+        artisan.specialty.toLowerCase().includes(event.target.value) ||
+        artisan.location.toLowerCase().includes(event.target.value)
       );
       setFiltreArtisans(filtre);
     };
@@ -38,28 +38,30 @@ const Header = () => {
             </div>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search" onChange={handleRecherche}/>
-              <button type="submit">Search</button>
+              <button type="submit" className="searchButton">Search</button>
             </form>
           </div>
         </div>
       </nav>
       {filtreArtisans.length > 0 && (
           <div className="container ">
-            <section>
+            <section className="searchContainer">
             <h2>Résultat de la recherche:</h2>
             <div className="search">
               {filtreArtisans.map(artisan =>(
+                <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                 <div key={artisan.id} >
                   <div className="card result">
                     <div className="card-header">
                       <h2> {artisan.name} </h2>
                     </div>
                     <div className="card-body">
-                      <p> {artisan.specialty} </p>
-                      <p> {artisan.location} </p>
+                      <p>Spécialité: {artisan.specialty} </p>
+                      <p>Localisation: {artisan.location} </p>
                     </div>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
             </section>

@@ -1,16 +1,17 @@
 import React from "react";
-import "./Batiment.css";
-import artisans from '../../datas.json';
+import artisans from '../datas.json';
+import { Link } from "react-router-dom";
 
-const Batiment = () => {
+const Service = () => {
 
-    let batArtisans = artisans.filter(artisan => artisan.category === "Bâtiment");
+    let servArtisans = artisans.filter(artisan => artisan.category === "Services");
 
     return(
         <div className="container batiment">
-            <h1>Les spécialistes du bâtiment</h1>
+            <h1>Les spécialistes du service</h1>
             <section className="artisanBat">
-                {batArtisans.map(artisan =>(
+                {servArtisans.map(artisan =>(
+                    <Link key={artisan.id} to={`/artisan/${artisan.id}`} className="link">
                     <div key={artisan.id} className="card batCard">
                         <div className="card-header artisanName">
                             <h2>{artisan.name}</h2>
@@ -21,10 +22,11 @@ const Batiment = () => {
                             <p>Localisation: {artisan.location} </p>
                         </div>
                     </div>
+                    </Link>
                 ))}
             </section>
         </div>
     )
 }
 
-export default Batiment;
+export default Service;

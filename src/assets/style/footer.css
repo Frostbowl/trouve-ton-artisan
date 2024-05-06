@@ -14,7 +14,8 @@
 }
 
 footer{
-    border-top: 0.4rem solid #00497c;
+    border-top: 0.2rem solid #00497c;
+    background-color: #f1f8fc;
 }
 
 @media (min-width: 768px){

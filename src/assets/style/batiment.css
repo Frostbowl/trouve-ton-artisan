@@ -13,6 +13,7 @@
     border: 0.4rem solid #00497c;
     border-radius: 15px;
     margin: 2rem auto;
+    background-color: white;
 }
 
 @media (min-width: 768px){
