@@ -20,10 +20,9 @@
 
 .searchContainer{
     background-color: white;
-    border: 0.4rem solid #00497c;
+    border: 0.2rem solid #00497c;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border-radius: 15px;
     padding-bottom: 2rem;
     padding-top: 1rem;
 }
