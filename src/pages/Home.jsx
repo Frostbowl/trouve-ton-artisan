@@ -26,7 +26,7 @@ const Home = () =>{
                     </div>
                     <div className="carousel-item ">
                         <h3>3</h3> 
-                        <p>Contactez le via le formulaire dédiée</p>
+                        <p>Contactez-le via le formulaire dédié</p>
                     </div>
                     <div className="carousel-item ">
                         <h3>4</h3> 

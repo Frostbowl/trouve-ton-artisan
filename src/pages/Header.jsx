@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search" onChange={handleRecherche}/>
-              <button type="submit" className="searchButton">Search</button>
+              <button type="submit" className="searchButton">Rechercher</button>
             </form>
           </div>
         </div>
