@@ -1,0 +1,23 @@
+.notFound{
+    background-color: #384050;
+    height: 56em;
+    color: #cd2c2e ;
+    text-align: center;
+}
+
+.notFound h1{
+    text-decoration: none;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.stopImg{
+    width: 50%;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px){
+    .stopImg{
+        width: 18%;
+    }
+}
