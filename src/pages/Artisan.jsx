@@ -56,7 +56,7 @@ const Artisan = () => {
                         <h2>Localisation: {artisan.location}</h2>
                         <h2>Spécialité: {artisan.specialty}</h2>
                 </div>
-                <div className="test">
+                <div className="aboutDiv">
                     <div className="card about">
                         <div className="card-header">
                             à propos
@@ -85,7 +85,6 @@ const Artisan = () => {
                         </form>
                     </div>
                 </div>
-                <button className="return"><Link to='/'>Retour à l'accueil</Link></button>
             </section>
         </div>
     )

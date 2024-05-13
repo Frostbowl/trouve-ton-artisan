@@ -1,7 +1,6 @@
 .page{
     background-color: white;
-    border: 0.4rem solid #00497c;
-    border-radius: 15px;
+    border: 0.2rem solid #00497c;
     margin: 2rem auto;
 
 }
@@ -52,7 +51,7 @@ textarea{
         width: 30rem;
     }
 
-    .test{
+    .aboutDiv{
         display: flex;
         flex-direction: row;
         align-items: center;

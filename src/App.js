@@ -18,7 +18,9 @@ function App() {
 
 
   const location = useLocation();
-  const pathFound = ['/', '/batiment', '/service', '/fabrication', '/alimentation', '/mention', '/data', '/access', '/cookie', '/artisan/:id'];
+  const pathFound = ['/', '/batiment', '/service', '/fabrication', '/alimentation', '/mention', '/data', '/access', '/cookie', 
+  '/artisan/1','/artisan/2','/artisan/3','/artisan/4','/artisan/5','/artisan/6','/artisan/7','/artisan/8','/artisan/9','/artisan/10',
+  '/artisan/11','/artisan/12','/artisan/13','/artisan/14','/artisan/15','/artisan/16','/artisan/17',];
   const headerFooter = pathFound.includes(location.pathname); 
 
   return (
